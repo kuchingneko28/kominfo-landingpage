@@ -177,6 +177,8 @@ img {
   .nav-link {
     position: absolute;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
     background-color: rgb(230, 124, 124);
     padding: 25px;
     width: 100%;
@@ -184,8 +186,6 @@ img {
     top: 0;
     right: 0;
     transform: translateY(-1100px);
-    align-items: flex-start;
-    justify-content: space-around;
     transition: all 0.5s;
     opacity: 0;
     z-index: 1;
