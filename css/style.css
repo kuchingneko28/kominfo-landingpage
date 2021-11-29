@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic Css */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  padding: 0 30px;
+  background: transparent;
+}
+
+.nav-link {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.nav-link a {
+  color: white;
+  display: inline-block;
+  position: relative;
+}
+.nav-link a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.nav-link a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.logo {
+  width: 150px;
+}
+.text-high {
+  font-weight: 500;
+}
+/* Burger Menu */
+.burger {
+  cursor: pointer;
+  display: none;
+}
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  background-color: white;
+  transition: all 0.4s;
+}
+.toggle span:first-child {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle span:nth-child(2) {
+  opacity: 0;
+}
+.toggle span:last-child {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Background */
+.bg-home {
+  background: rgb(255, 152, 152);
+  background: linear-gradient(180deg, rgba(255, 152, 152, 1) 0%, rgba(255, 211, 180, 1) 100%);
+  color: white;
+}
+/* Main */
+.main {
+  display: grid;
+  padding: 0 50px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 90vh;
+  line-height: 1.4;
+}
+.main h1 {
+  font-weight: 600;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+/* Social box */
+.social-box {
+  display: flex;
+  gap: 10px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  padding: 10;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0px rgba(255, 99, 99, 0.5);
+  transition: all 0.5s;
+}
+.box:hover {
+  transform: translateY(10px);
+}
+
+/* Address & Phone */
+.address-phone {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.address-phone p {
+  position: relative;
+  display: inline-block;
+}
+
+.address-phone p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.address-phone p:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.address-phone img {
+  margin-left: -10px;
+  width: 30px;
+}
+
+/* Media query */
+@media only screen and (max-width: 1008px) {
+  /* Mobile Navbar */
+  .navbar {
+    padding: 0 20px;
+  }
+  .nav-link {
+    display: none;
+  }
+  .logo {
+    width: 120px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  /* Mobile main */
+  .main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 20px;
+  }
+  .main h1 {
+    font-size: 25px;
+  }
+  .main p {
+    font-size: 14px;
+  }
+  .social-box {
+    align-items: center;
+    justify-content: center;
+  }
+  .address-phone {
+    align-items: center;
+    justify-content: center;
+  }
+}
