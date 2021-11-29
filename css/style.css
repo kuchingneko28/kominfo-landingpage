@@ -10,6 +10,7 @@
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 a {
@@ -30,6 +31,7 @@ img {
 }
 
 .nav-link {
+  position: relative;
   display: flex;
   list-style: none;
   gap: 15px;
@@ -169,8 +171,41 @@ img {
   .navbar {
     padding: 0 20px;
   }
+  .burger {
+    z-index: 1;
+  }
   .nav-link {
-    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgb(230, 124, 124);
+    padding: 25px;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: translateX(400px);
+    align-items: flex-start;
+    justify-content: space-around;
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: 1;
+  }
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background-image: url("../img/aw.png");
+    background-repeat: no-repeat;
+    background-size: 340px;
+    opacity: 0.75;
+    right: 0;
+    top: 143;
+  }
+
+  .nav-active {
+    transform: translateY(0);
+    opacity: 1;
   }
   .logo {
     width: 120px;
