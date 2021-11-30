@@ -185,18 +185,18 @@ img {
     right: 0;
     transform: translateY(-1100px);
     transition: all 0.5s;
+    overflow-y: hidden;
     opacity: 0;
     z-index: -1;
-    overflow-y: hidden;
   }
   .nav-link::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background: url("../img/aw.png") no-repeat right top;
     opacity: 0.45;
-    top: 143;
+    top: 230;
     right: 0;
     bottom: 0;
   }
