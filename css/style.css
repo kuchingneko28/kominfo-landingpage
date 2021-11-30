@@ -10,7 +10,6 @@
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  overflow-y: hidden;
 }
 
 a {
@@ -187,7 +186,7 @@ img {
     transform: translateY(-1100px);
     transition: all 0.5s;
     opacity: 0;
-    z-index: 1;
+    z-index: -1;
   }
   .nav-link::before {
     content: "";
@@ -205,6 +204,7 @@ img {
   .nav-active {
     transform: translateY(0);
     opacity: 1;
+    z-index: 1;
   }
   .logo {
     width: 120px;
@@ -219,8 +219,8 @@ img {
     text-align: center;
     display: flex;
     flex-direction: column;
-
     padding: 0 20px;
+    overflow-y: hidden;
   }
   .main h1 {
     font-size: 25px;
