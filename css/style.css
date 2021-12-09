@@ -37,9 +37,9 @@ img {
   text-transform: uppercase;
 }
 .nav-link a {
+  position: relative;
   color: white;
   display: inline-block;
-  position: relative;
 }
 .nav-link a::after {
   content: "";
@@ -185,7 +185,7 @@ img {
     right: 0;
     transform: translateY(-1100px);
     transition: all 0.5s;
-    overflow-y: hidden;
+    overflow: hidden;
     opacity: 0;
     z-index: -1;
   }
@@ -196,7 +196,7 @@ img {
     height: 80%;
     background: url("../img/aw.png") no-repeat right top;
     opacity: 0.45;
-    top: 230;
+    top: 235;
     right: 0;
     bottom: 0;
   }
